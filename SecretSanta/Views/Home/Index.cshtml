@@ -1,0 +1,16 @@
+﻿@model SecretSantaUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Secret Santa</h1>
+    <p></p>
+    @using (Html.BeginForm())
+    {
+        <p>Enter your Secret Santa Code here</p>
+        <p>@Html.PasswordFor(m => m.UserCode, new { style = "text-align: center;" })</p>
+        <p><input type="submit" value="Submit" /></p>
+        <p style="color: red">@Html.DisplayFor(m => m.InfoMsg)</p>
+    }
+</div>

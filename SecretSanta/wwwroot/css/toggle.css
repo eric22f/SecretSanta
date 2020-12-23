@@ -1,0 +1,102 @@
+﻿/* Original css from https://bootsnipp.com/chiraggoyal777 "Checkbox as Toggle Switch (Pure CSS)" */
+.ques {
+    color: darkslateblue;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 27px;
+}
+
+    .switch input {
+        display: none;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f2f2;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        z-index: 2;
+        content: "";
+        height: 23px;
+        width: 23px;
+        left: 14px;
+        bottom: 2px;
+        background-color: lightgray;
+        -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+        -webkit-transition: .4s;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .slider:after {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        content: "YES";
+        font-size: 15px;
+        text-align: left !important;
+        line-height: 27px;
+        padding-left: 0;
+        width: 80px;
+        color: #fff;
+        height: 27px;
+        border-radius: 27px;
+        background-color: #1872ff;
+        -webkit-transform: translateX(-40px);
+        -ms-transform: translateX(-40px);
+        transform: translateX(-40px);
+        transition: all 0.4s ease-in-out;
+    }
+
+input:checked ~ .slider:after {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    padding-left: 19px;
+    background-color: green;
+}
+
+input:checked ~ .slider:before {
+    background-color: #fff;
+}
+
+input:checked ~ .slider:before {
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 27px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+.absolute-no {
+    position: absolute;
+    left: 0;
+    color: darkslategrey;
+    text-align: right !important;
+    font-size: 15px;
+    width: calc(100% - 10px);
+    height: 27px;
+    line-height: 27px;
+    cursor: pointer;
+}
