@@ -145,7 +145,7 @@ namespace SecretSanta.Models.Services
 
             int count = santas.Count;
 
-            // Interate through each available santa in reverse
+            // Itterate through each available santa in reverse
             // Remove santas and users as they are matched
             for (int i = santas.Count - 1; i >= 0 && users.Count > 0; i--)
             {
@@ -160,7 +160,7 @@ namespace SecretSanta.Models.Services
                     {
                         // We have a match
                         matchingSantaIndex = ii;
-                        // Start by matching someone that has not a secret santa
+                        // Start by matching someone that is not a secret santa
                         if (!selected.Any(s => s.SantaId == user.SantaId))
                         {
                             // Good match
