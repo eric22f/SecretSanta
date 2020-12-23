@@ -145,7 +145,7 @@ namespace SecretSanta.Models.Services
 
             int count = santas.Count;
 
-            // Itterate through each available santa in reverse
+            // Iterate through each available santa in reverse
             // Remove santas and users as they are matched
             for (int i = santas.Count - 1; i >= 0 && users.Count > 0; i--)
             {
